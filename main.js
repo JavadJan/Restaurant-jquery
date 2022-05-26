@@ -26,8 +26,18 @@ $(document).ready(function(){
           $(this).prev().text((i+=1).toString())
           
       })
+     
       $('.uil-minus').click(function () {
-        $(this).prev().parseInt(text())-=1
+        
+        let num =parseInt( $(this).next().text() )
+        if (num>0) {
+            num--
+            $(this).next().text(num) // read again and prepare for 1 minus again
+        }
+        else{
+            $(this).next().text(0)
+        }
+        
         
     })
   });
