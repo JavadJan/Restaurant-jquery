@@ -8,22 +8,21 @@
 
 .container {
   width: 100%;
-  height: 100vh;
   background-color: #f4f3f3;
 }
 
 .nav {
   position: fixed;
-  top: 2%;
+  top: 0;
   background-color: rgb(255, 255, 255);
-  width: 90%;
+  width: 100%;
   height: 4rem;
-  right: 5%;
   padding: 1rem;
-  padding-left: 3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   display: flex;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 2;
 }
 .nav ul {
   width: -webkit-fit-content;
@@ -71,15 +70,82 @@
   padding: 1.5rem;
 }
 
-.content {
+section h2 {
+  position: relative;
   width: 90%;
   margin: 0 auto;
+  top: 6rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  background: white;
+}
+
+/*=============== FOR SLIDER ==============*/
+.myslider {
   position: relative;
   top: 6rem;
+  width: 90%;
+  height: 70vh;
+  overflow: hidden;
+  background-color: white;
+}
+.myslider h2 {
+  position: absolute;
+  z-index: 2;
+  background-color: transparent;
+  top: 3rem;
+}
+.myslider .img-slide {
+  padding: 0.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.myslider .img-slide img {
+  width: 100%;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.myslider .img-slide .card-body {
+  position: absolute;
+  bottom: 15%;
+  color: rgb(255, 255, 255);
+  margin-left: 2%;
+  width: 40%;
+  line-height: 2rem;
+  padding: 1rem;
+}
+.myslider .img-slide .card-body h4 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+.myslider .img-slide .card-body p {
+  font-size: 1.3rem;
+  font-family: sans-serif, "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ============= for card ================= */
+.card-food h2 {
+  position: relative;
+  top: 7rem;
+}
+
+.content {
+  width: 90%;
+  margin: 1rem auto;
+  position: relative;
+  top: 7rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   padding: 0.5rem;
+  background-color: white;
 }
 .content .card {
   border: 1px solid rgb(228, 225, 225);
@@ -122,6 +188,58 @@
   text-align: center;
 }
 
+footer {
+  position: relative;
+  background: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+  width: 90%;
+  top: 3rem;
+  margin: 5rem auto;
+  height: 300px;
+  margin-bottom: 0;
+}
+footer .footer_container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+  background-color: white;
+}
+footer .footer_container .privacy a {
+  color: black;
+}
+footer .footer_container div h4 {
+  margin-bottom: 1.2rem;
+}
+footer .footer_container .footer_1 h4 {
+  color: black;
+}
+footer .footer_container .footer_1 p {
+  margin: 0 0 2rem;
+}
+footer .footer_container ul li {
+  margin-bottom: 0.7rem;
+}
+footer .footer_container ul li a:hover {
+  text-decoration: underline;
+  color: black;
+}
+footer .footer_container .footer_2 a {
+  color: black;
+}
+footer .footer_container .footer_social {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+footer .footer_copyright {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 1.2rem 0;
+}
+
 @media screen and (max-width: 830px) {
   .content {
     grid-template-columns: 1fr 1fr;
@@ -154,5 +272,10 @@
 
   .content {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .content {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */
